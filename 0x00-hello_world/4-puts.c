@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
 *main - main entry Hello C
-*return: 0 success
+*Return: 0 success
 */
 int main(void)
 {
