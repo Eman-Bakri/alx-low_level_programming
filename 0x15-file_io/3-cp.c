@@ -39,7 +39,7 @@ void close_file(int floc)
 
 	if (cls == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close floc %d\n", floc);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", floc);
 		exit(100);
 	}
 }
