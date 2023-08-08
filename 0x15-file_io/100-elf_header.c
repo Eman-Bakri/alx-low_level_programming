@@ -6,12 +6,6 @@
 #include <stdio.h>
 #include <elf.h>
 
-/*
- * e_ident[] - represets IDENTIFICATION INDEXES
- *
- * Description: The initial bytes makes the file be an object file
- *              and give machine-independent data.
-*/
 void check_for_elf(unsigned char *e_ident);
 void print_magic(unsigned char *e_ident);
 void print_class(unsigned char *e_ident);
@@ -22,6 +16,15 @@ void print_osabi(unsigned char *e_ident);
 void print_type(unsigned int e_type, unsigned char *e_ident);
 void print_entry(unsigned long int e_entry, unsigned char *e_ident);
 void close_elf(int elf);
+
+ /*
+ * e_ident[] - represets IDENTIFICATION INDEXES
+ *
+ * Description: The initial bytes makes the file be an object file
+ *              and give machine-independent data.
+*/
+
+
 /**
  * check_for_elf - Checks whether a file is an ELF file or not.
  * @e_ident: A pointer to an array having ELF magic nums.
@@ -303,7 +306,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		exit(98);
 	}
 
-	check_elf(header->e_ident);
+	check_for_elf(header->e_ident);
 	printf("ELF Header:\n");
 	print_magic(header->e_ident);
 	print_class(header->e_ident);
