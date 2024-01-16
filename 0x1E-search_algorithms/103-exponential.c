@@ -58,7 +58,7 @@ int _binarys(int *array, size_t min, size_t max, int value)
 int exponential_search(int *array, size_t size, int value)
 {
 	size_t mark = 1;
-	size_t min = 0;;
+	size_t min = 0;
 	int outp;
 
 	if (array != NULL)

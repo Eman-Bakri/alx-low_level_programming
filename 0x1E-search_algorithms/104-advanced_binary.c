@@ -1,4 +1,7 @@
 #include "search_algos.h"
+int advanced_binary(int *array, size_t size, int value);
+int _binary_sr(int *array, size_t l, size_t r, int value);
+void _arrayprint(int *array, size_t l, size_t r);
 
 /**
  * advanced_binary - Searches a value in a sorted array using a binary search.
