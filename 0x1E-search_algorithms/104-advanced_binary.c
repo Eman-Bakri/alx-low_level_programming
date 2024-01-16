@@ -74,3 +74,4 @@ void _arrayprint(int *array, size_t l, size_t r)
 			printf("%d%s", *(array + a), a < l + (r - l) ? ", " : "\n");
 	}
 }
+
